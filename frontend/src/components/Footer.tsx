@@ -1,6 +1,9 @@
 import React from 'react'
 
 export default function Footer() {
+  let firstName: string = "Ashok"
+  let lastName : string="katwal"
+  console.log(firstName,lastName)
   return (
     <>
     <div className='mt-32 p-24 bg-black rounded-t-full'>
@@ -17,4 +20,4 @@ export default function Footer() {
     </>
    
   )
-}
+} 

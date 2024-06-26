@@ -1,6 +1,9 @@
 import React from 'react'
 
 export default function Carousal() {
+  const names:string[]=[]
+  names.push("Ashok")
+  console.log(names)
   return (
     <div>
      <div className='flex justify-between mt-20 pl-32 pr-32 pt-36'>

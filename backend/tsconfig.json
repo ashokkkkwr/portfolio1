@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "outDir": "./dist",
+    "moduleResolution": "node"
+  },
+  "include": ["./index.ts"]
+}
