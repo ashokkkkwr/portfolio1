@@ -5,8 +5,9 @@ import Project from '../components/Project'
 import Footer from '../components/Footer'
 
 export default function Home() {
-  const ashok : string[]=[]
-  let ashok :string = "ashok"
+ 
+
+ 
   return (
     <div>
 
