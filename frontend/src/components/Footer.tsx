@@ -1,9 +1,16 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react'
 
 export default function Footer() {
-  let firstName: string = "Ashok"
-  let lastName : string="katwal"
+  const firstName: string = "Ashok"
+  const lastName : string="katwal"
   console.log(firstName,lastName)
+  const names: string[]=[]
+  const req:readonly string[]=['asgok']
+  const names23 : string[]=["sdf"]
+  const jvayeni :readonly string[]=["mfds"]
+  
+
   return (
     <>
     <div className='mt-32 p-24 bg-black rounded-t-full'>
