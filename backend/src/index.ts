@@ -19,3 +19,4 @@ mongoose.connect('mongodb://localhost:27017/jvaye',)
 }).catch((error)=>{
     console.error(error)
 })
+console.log('lala')

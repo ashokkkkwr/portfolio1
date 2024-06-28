@@ -42,7 +42,12 @@ router.post('/register',async (req,res)=>{
     if(!isStrongPassword(password)){
         return res.status(400).json('password is not strong enough')
     }
-    const newUser = new User({email,password,role});//create new user instance
+    const validRoles = ['user','admin'];
+    //checks if valid roles is included.
+    if(role&& !validRoles.includes(role)){
+        return res.status(400).json('Invalid role')
+    }
+    const newUser = new User({email,password,role: role || 'user'});//create new user instance
     await newUser.save()//saves to databsae
     return res.status(201).json(newUser)
     }catch(error){
@@ -52,7 +57,7 @@ router.post('/register',async (req,res)=>{
   
 });
 router.post('/login',async(req,res)=>{
-    const {email,password,role}=req.body;
+    const {email,password}=req.body;
     try{
         const user = await User.findOne({email})
         if(!user){
@@ -68,6 +73,5 @@ router.post('/login',async(req,res)=>{
     }catch(error){
         
     }
-    
 })
 export default router;
