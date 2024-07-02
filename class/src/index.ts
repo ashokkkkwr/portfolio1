@@ -43,4 +43,31 @@ class UserDTO{
     }
 
 }
+async function connectToDatabase(){
+mongoose.connect('mongodb://localhost:27017/jvaye',)
+.then(()=>{
+    console.log('connected')
+}).catch((error)=>{
+    console.error(error)
+})
+}
+async function createUser(){
+    const userDTO = new UserDTO('John Doe','John.deo@email.com',30);
+    const plainUser = classToPlain(userDTO);
+
+    const user = new User(plainUser);
+    try{
+        const savedUser = await user.save();
+        console.log("user saved",savedUser);
+    }catch(error){
+        console.error('Error Saving user:',error)
+    }
+}
+
+async function run(){
+    await connectToDatabase();
+    await createUser();
+    mongoose.disconnect();
+}
+run();
 
