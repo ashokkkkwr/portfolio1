@@ -1,0 +1,23 @@
+{
+  "name": "class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node-dev ./src/index.ts"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "mongoose": "^8.4.4",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2"
+  }
+}

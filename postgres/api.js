@@ -2,7 +2,7 @@ const client = require('./connection.js')
 const bodyParser = require('body-parser')
 const express = require('express')
 const app=express();
-app.use(bodyParser.json())
+app.use(express.json());
 app.listen(3000,()=>{
     console.log("server is now listening to the port 3000")
 })
