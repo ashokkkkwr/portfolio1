@@ -20,3 +20,4 @@ mongoose.connect('mongodb://localhost:27017/jvaye',)
     console.error(error)
 })
 console.log('lala')
+console.log('ssjd');
