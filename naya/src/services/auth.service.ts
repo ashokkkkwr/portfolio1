@@ -24,5 +24,8 @@ class AuthService{
             select:['id','username','email','password'],
         })
         if (!admin) throw HttpException.notFound(Message.invalidCredentials)
-        }
+            const isPasswordMatched = await this.bcryptService.compare(data.password,admin.password)
+            if(!isPasswordMatched) throw HttpException.notFound(Message.invalidCredentials)
+                return await adminService.getById(admin.id)
+        
 }
